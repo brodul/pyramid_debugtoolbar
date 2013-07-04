@@ -9,3 +9,6 @@ python:
 install:
   - python setup.py dev
 script: nosetests 
+branches:
+  only:
+    - pool
