@@ -12,13 +12,6 @@ pyramid_debugtoolbar_require([
   $(function() {
     var sourceView = null;
 
-    /**
-     * if we are in console mode, show the console.
-     */
-    if (window.CONSOLE_MODE && windoe.EVALEX) {
-      openShell(null, $('div.console div.inner').empty(), 0);
-    }
-
     $('div.traceback div.frame').each(function() {
       var
         target = $('pre', this)

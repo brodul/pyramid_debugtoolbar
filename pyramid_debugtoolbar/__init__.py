@@ -87,7 +87,6 @@ def includeme(config):
     config.add_route(ROOT_ROUTE_NAME, '/_debug_toolbar', static=True)
     config.add_route('debugtoolbar.source', '/_debug_toolbar/source')
     config.add_route('debugtoolbar.execute', '/_debug_toolbar/execute')
-    config.add_route('debugtoolbar.console', '/_debug_toolbar/console')
     config.add_route(EXC_ROUTE_NAME, '/_debug_toolbar/exception')
     config.add_route('debugtoolbar.sql_select',
                      '/_debug_toolbar/sqlalchemy/sql_select')

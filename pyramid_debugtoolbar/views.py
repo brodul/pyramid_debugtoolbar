@@ -95,28 +95,6 @@ class ExceptionDebugView(object):
                     return Response(result, content_type='text/html')
         return HTTPBadRequest()
 
-    @view_config(
-        route_name='debugtoolbar.console',
-        renderer='pyramid_debugtoolbar:templates/console.dbtmako',
-        custom_predicates=(valid_host, valid_request)
-        )
-    def console(self):
-        static_path = self.request.static_url(STATIC_PATH)
-        toolbar_root_path = self.request.route_url(ROOT_ROUTE_NAME)
-        exc_history = self.exc_history
-        vars = {
-            'evalex':           exc_history.eval_exc and 'true' or 'false',
-            'console':          'true',
-            'title':            'Console',
-            'traceback_id':     self.tb or -1,
-            'root_path':        toolbar_root_path,
-            'static_path':      static_path,
-            'token':            exc_history.token,
-            }
-        if 0 not in exc_history.frames:
-            exc_history.frames[0] = _ConsoleFrame({})
-        return vars
-
 
 class SQLAlchemyViews(object):
     def __init__(self, request):
