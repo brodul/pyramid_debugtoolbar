@@ -106,12 +106,14 @@ class TestExceptionDebugView(unittest.TestCase):
         self.assertEqual(response.status_int, 400)
 
     def test_console(self):
+        from pyramid_debugtoolbar.utils import get_translator
         request = self._makeRequest()
         request.static_url = lambda *arg, **kw: 'http://static'
         request.route_url = lambda *arg, **kw: 'http://root'
         request.params['frm'] = '0'
         view = self._makeOne(request)
         result = view.console()
+        translator = result.pop('_')
         self.assertEqual(result,
                          {'console': 'true',
                           'title': 'Console',
@@ -119,9 +121,10 @@ class TestExceptionDebugView(unittest.TestCase):
                           'traceback_id': -1,
                           'token': 'token',
                           'static_path': 'http://static',
-                          'root_path':'http://root',
+                          'root_path': 'http://root',
                           }
                          )
+        self.assertTrue(translator.__name__, get_translator(request).__name__)
 
     def test_console_no_initial_history_frame(self):
         request = self._makeRequest()
