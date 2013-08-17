@@ -41,8 +41,7 @@
 
     <div class="explanation">
       <p>
-        <b>Warning: this feature should not be enabled on production
-          systems.</b>
+        <b>${_("Warning: this feature should not be enabled on production systems.")}</b>
       </p>
 
       % if evalex:

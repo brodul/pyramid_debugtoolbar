@@ -4,6 +4,8 @@ from logging import getLogger
 
 from pyramid.util import DottedNameResolver
 from pyramid.settings import asbool
+from pyramid.i18n import get_localizer
+from pyramid.i18n import TranslationStringFactory
 
 from pyramid_debugtoolbar.compat import binary_type
 from pyramid_debugtoolbar.compat import text_type
@@ -166,3 +168,12 @@ def addr_in(addr, hosts):
 
 def last_proxy(addr):
     return addr.split(',').pop().strip()
+
+
+def get_translator(request):
+    tsf = TranslationStringFactory('pyramid_debugtoolbar')
+
+    def translator(*args, **kwargs):
+        localizer = get_localizer(request)
+        return localizer.translate(tsf(*args, **kwargs))
+    return translator

@@ -30,6 +30,7 @@ from pyramid_debugtoolbar.utils import escape
 from pyramid_debugtoolbar.utils import STATIC_PATH
 from pyramid_debugtoolbar.utils import ROOT_ROUTE_NAME
 from pyramid_debugtoolbar.utils import EXC_ROUTE_NAME
+from pyramid_debugtoolbar.utils import get_translator
 
 _coding_re = re.compile(r'coding[:=]\s*([-\w.]+)')
 _line_re = re.compile(r'^(.*?)$(?m)')
@@ -257,6 +258,7 @@ class Traceback(object):
             'token':            request.exc_history.token,
             'root_path':        root_path,
             'url':              url,
+            '_':                get_translator(request),
         }
         return render('pyramid_debugtoolbar:templates/exception.dbtmako',
                       vars, request=request)

@@ -15,6 +15,7 @@ from pyramid_debugtoolbar.utils import format_sql
 from pyramid_debugtoolbar.utils import get_setting
 from pyramid_debugtoolbar.utils import addr_in
 from pyramid_debugtoolbar.utils import last_proxy
+from pyramid_debugtoolbar.utils import get_translator
 from pyramid_debugtoolbar.toolbar import IRequestAuthorization
 
 
@@ -112,6 +113,7 @@ class ExceptionDebugView(object):
             'root_path':        toolbar_root_path,
             'static_path':      static_path,
             'token':            exc_history.token,
+            '_':                get_translator(self.request),
             }
         if 0 not in exc_history.frames:
             exc_history.frames[0] = _ConsoleFrame({})

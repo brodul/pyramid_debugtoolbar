@@ -19,6 +19,7 @@ from pyramid_debugtoolbar.utils import EXC_ROUTE_NAME
 from pyramid_debugtoolbar.utils import logger
 from pyramid_debugtoolbar.utils import addr_in
 from pyramid_debugtoolbar.utils import last_proxy
+from pyramid_debugtoolbar.utils import get_translator
 from pyramid.httpexceptions import WSGIHTTPException
 
 
@@ -64,7 +65,9 @@ class DebugToolbar(object):
             button_style = get_setting(request.registry.settings,
                     'button_style', '')
             vars = {'panels': self.panels, 'static_path': static_path,
-                    'root_path': root_path, 'button_style': button_style}
+                    'root_path': root_path, 'button_style': button_style,
+                    "_": get_translator(self.request),
+                    }
             toolbar_html = render(
                     'pyramid_debugtoolbar:templates/toolbar.dbtmako',
                     vars, request=request)
