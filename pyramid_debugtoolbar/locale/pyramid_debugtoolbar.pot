@@ -1,0 +1,109 @@
+# Translations template for pyramid_debugtoolbar.
+# Copyright (C) 2013 ORGANIZATION
+# This file is distributed under the same license as the pyramid_debugtoolbar
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pyramid_debugtoolbar 1.0.7dev\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2013-07-12 17:19+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: pyramid_debugtoolbar/panels/headers.py:27
+#: pyramid_debugtoolbar/panels/headers.py:30
+msgid "HTTP Headers"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/introspection.py:29
+#: pyramid_debugtoolbar/panels/introspection.py:32
+msgid "Introspection"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/logger.py:59
+msgid "Logging"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/logger.py:67
+msgid "Log Messages"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/performance.py:140
+#: pyramid_debugtoolbar/panels/performance.py:143
+msgid "Performance"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/performance.py:184
+msgid "User CPU time"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/performance.py:185
+msgid "System CPU time"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/performance.py:186
+msgid "Total CPU time"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/performance.py:187
+msgid "Elapsed time"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/performance.py:188
+msgid "Context switches"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/renderings.py:30
+#: pyramid_debugtoolbar/panels/renderings.py:37
+msgid "Renderings"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/request_vars.py:18
+#: pyramid_debugtoolbar/panels/request_vars.py:21
+msgid "Request Vars"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/routes.py:28
+#: pyramid_debugtoolbar/panels/routes.py:31
+msgid "Routes"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/settings.py:43
+#: pyramid_debugtoolbar/panels/settings.py:46
+msgid "Settings"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/sqla.py:76
+msgid "SQLAlchemy"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/sqla.py:84
+msgid "SQLAlchemy queries"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/tweens.py:24
+#: pyramid_debugtoolbar/panels/tweens.py:27
+msgid "Tweens"
+msgstr ""
+
+#: pyramid_debugtoolbar/panels/versions.py:30
+#: pyramid_debugtoolbar/panels/versions.py:36
+msgid "Versions"
+msgstr ""
+
+#: pyramid_debugtoolbar/templates/exception.dbtmako:40
+msgid "Warning: this feature should not be enabled on production systems."
+msgstr ""
+
+#: pyramid_debugtoolbar/templates/toolbar.dbtmako:42
+msgid "Enable or disable the panel"
+msgstr ""
+
