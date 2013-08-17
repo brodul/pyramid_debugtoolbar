@@ -96,5 +96,6 @@ def includeme(config):
     config.scan('pyramid_debugtoolbar.views')
     config.add_directive('set_debugtoolbar_request_authorization',
                          set_request_authorization_callback)
+    config.add_translation_dirs('pyramid_debugtoolbar:locale')
 
     config.introspection = introspection
